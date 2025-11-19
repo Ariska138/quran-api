@@ -28,6 +28,9 @@ app.get('/', (c) => {
 
 // ... (kode otentikasi dan catatan akan masuk di bawah)
 // ...
+app.get('/api/status', (c) => {
+  return c.json({ msg: 'Server OK' });
+});
 
 // Jalankan Server (untuk lokal)
 if (process.env.VERCEL) {
