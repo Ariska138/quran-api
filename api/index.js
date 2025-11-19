@@ -10,7 +10,7 @@ const api = new Hono();
 api.use(
   '/*',
   cors({
-    origin: ['http://127.0.0.1:5500', 'https://domain-client-anda.com'], // Ganti dengan domain client Anda
+    origin: ['http://127.0.0.1:5500'], // Ganti dengan domain client Anda
     credentials: true, // PENTING untuk cookies (Auth)
   })
 );
