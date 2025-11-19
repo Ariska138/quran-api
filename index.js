@@ -3,7 +3,7 @@ import 'dotenv/config';
 import { Hono } from 'hono';
 import { serve } from '@hono/node-server';
 import { cors } from 'hono/cors'; // Import CORS
-import { serveStatic } from '@hono/node-server/serve-static';
+// import { serveStatic } from '@hono/node-server/serve-static';
 
 const app = new Hono();
 
@@ -18,13 +18,13 @@ app.use(
   })
 );
 
-// Server Statis (UI)
-app.use('/*', serveStatic({ root: './public' }));
+// // Server Statis (UI)
+// app.use('/*', serveStatic({ root: './public' }));
 
-// Endpoint Dasar
-app.get('/', (c) => {
-  return c.redirect('/index.html');
-});
+// // Endpoint Dasar
+// app.get('/', (c) => {
+//   return c.redirect('/index.html');
+// });
 
 // ... (kode otentikasi dan catatan akan masuk di bawah)
 // ...
